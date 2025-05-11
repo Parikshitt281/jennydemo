@@ -9,6 +9,8 @@ pipeline {
                 sh '''
                 sudo yum update -y
                 sudo yum install httpd -y
+                sudo touch /var/www/html/index.html
+                sudo chmod 777 /var/www/html/index.html
                 sudo echo "this in http server" > /var/www/html/index.html
                 sudo systemctl start httpd
                 sudo systemctl enable httpd 
