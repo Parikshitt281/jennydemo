@@ -10,6 +10,7 @@ pipeline {
                 sudo yum update -y
                 sudo yum install httpd -y 
                 sudo echo "this in http server" > /var/www/html/index.html
+                sudo echo "new addition in http" >> /var/www/html/index.html
                 sudo systemctl start httpd 
                 sudo systemctl enable httpd
                 sudo echo "completed" 
