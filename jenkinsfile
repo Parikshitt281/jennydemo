@@ -11,7 +11,7 @@ pipeline {
                 sudo yum install httpd -y
                 echo "this in http server" > /var/www/html/index.html
                 sudo systemctl start httpd
-                sudo systemctl enable httpd
+                sudo systemctl enable httpd 
                 sudo echo "completed" 
                  '''
             }
